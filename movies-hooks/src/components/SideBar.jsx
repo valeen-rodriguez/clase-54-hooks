@@ -5,6 +5,7 @@ import GenresInDb from './GenresInDb';
 import LastMovieInDb from './LastMovieInDb';
 import ContentRowMovies from './ContentRowMovies';
 import SearchMovies from './SearchMovies';
+import SelectAdrres from './SelectAdrres';
 import NotFound from './NotFound';
 import { Routes, Route, Link } from "react-router-dom"
 
@@ -67,6 +68,12 @@ function SideBar(){
                         <span>Search Movies</span></Link>
                 </li>
 
+                <li className="nav-item nav-link">
+                <Link className="nav-link" to="/SelectAdrres">
+                        <i className="fas fa-fw fa-table"></i>
+                        <span>Registro</span></Link>
+                </li>
+
                 {/*<!-- Divider -->*/}
                 <hr className="sidebar-divider d-none d-md-block"/>
             </ul>
@@ -94,6 +101,7 @@ function SideBar(){
                 <Route path="/LastMovieInDb" element={ <LastMovieInDb/> } />
                 <Route path="/ContentRowMovies" element={ <ContentRowMovies/> } />
                 <Route path="/SearchMovies" element={ <SearchMovies/> } />
+                <Route path="/SelectAdrres" element= {<SelectAdrres />} />
                 <Route component={NotFound} />
             </Routes>
             {/*<!-- End Microdesafio 2 -->*/}
